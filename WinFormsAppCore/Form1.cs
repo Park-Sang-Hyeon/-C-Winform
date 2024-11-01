@@ -1,11 +1,10 @@
-ï»¿using Microsoft.Extensions.Logging;
-using System.Windows.Forms;
+using Microsoft.Extensions.Logging;
 
-namespace WindowsFormsApp
+namespace WinFormsAppCore
 {
     public partial class Form1 : Form
     {
-        private readonly ILogger<Form1> _logger;
+        private readonly ILogger _logger;
 
         public Form1(ILogger<Form1> logger)
         {
@@ -18,7 +17,8 @@ namespace WindowsFormsApp
 
         private void ErrorTest()
         {
-            this._logger.LogError("WindowsFormsApp Error ??");
+            _logger.LogInformation("¾Ë¸²");
+            _logger.LogError("Error Test");
         }
     }
 }
